@@ -6,10 +6,11 @@ include_once("config.php");
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>View shopping cart</title>
-<link href="style/style.css" rel="stylesheet" type="text/css"></head>
+<title>Kazmik's Kitchen - View Cart</title>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<link href="css/style.css" rel="stylesheet" type="text/css"></head>
 <body>
-<div id="products-wrapper">
+<div id="products-wrapper" class="wrap">
  <h1>View Cart</h1>
  <div class="view-cart">
  	<?php
