@@ -385,7 +385,15 @@ ul.navmenu li ul {
 
 }
 
-/* HOME DELIVERY SECTION */
+/* ORDER NOW SECTION */
+
+.ordernowhero {
+  
+  padding: 5rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 
 .product-nav
 {
@@ -417,7 +425,7 @@ ul.navmenu li ul {
   float: left;
   margin-right: .5rem;
   background: #F0F0F0; 
-  width: 31.3%%;
+  width: 31.5%%;
   border: 0.0625rem solid #DDD;
   border-radius: 0.3125rem;
   box-shadow: 0.125rem 0.125rem 0.125rem #F8F8F8;
@@ -624,7 +632,7 @@ ul.navmenu li ul {
         float: none;        
         height: 6rem;
         margin-top: .5rem;
-        margin-left: .2rem;
+        margin-left: .5rem;
         width: 100%;
     }
   .shopping-cart , .cart-itm

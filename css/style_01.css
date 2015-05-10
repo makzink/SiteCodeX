@@ -135,7 +135,13 @@ a.bookatable {
 	color: #3084BF;
 }
 
-/* HOME DELIVERY SECTION */
+/* ORDER NOW SECTION */
+
+.ordernowhero {
+	background-color: #EBF5FC;
+	border-top: 0.0625rem solid #ACC5D9;;
+	border-bottom: 0.0625rem solid #ACC5D9;
+}
 
 .product-nav{
 	font: 0.75rem Arial, Helvetica, sans-serif;

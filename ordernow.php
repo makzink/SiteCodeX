@@ -49,6 +49,20 @@ include_once("config.php");
 
 <main role="main" class="clearfix">
 
+
+	<section class="ordernowhero">
+		<div class="wrap clearfix">
+
+		
+			<div class="infotext">
+				<h1>Order your heart's fill</h1>
+				<p>We provide everything here. Just with a click of your mouse you can avail them. So start Clicking and start Eating!!</p>
+			</div>
+
+		</div>
+	</section>
+
+
 	<div class="wrap"> 
 
 		<div class="product-nav">
