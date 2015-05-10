@@ -60,13 +60,8 @@ else
 	<div class="navicon closed"><i class="fa fa-navicon"></i></div>
 	<ul class="navmenu" id="opennav">
 		<li><a href="index.html" >Home</a></li>
-		<li><a href="menu.php">Menu</a></li>
-		<li><a href="#bittoeat">Bite To Eat<span>+</span></a>
-				<ul>
-				<li><a href="bookatable.php">Book a Table</a></li>
-				<li><a href="homedelivery.php">Home Delivery</a></li>
-				</ul>
-		</li>
+		<li><a href="ordernow.php">Order Now</a></li>
+		<li><a href="bookatable.php">Book a Table</a></li>
 		<li><a href="aboutus.html">About US</a></li>
 		<li><a href="#" class="active">Contact</a></li>
 	</ul>
@@ -112,7 +107,7 @@ else
 		<p id="timing">
 			Weekdays  :  9am-11pm<br/>
 			Saturday  :  9am-10pm<br/>
-			Sunday    :  11am-10am
+			Sunday    :  11am-10pm
 		</p>
 			
 	</div>

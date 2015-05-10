@@ -6,7 +6,7 @@
 	<meta name="author" content="Kazmik Khan">
 	<meta name="description" content="A website for Kazmik's Kitchen">
 	<meta name="keywords" content="Kazmik, kazmik, khan, kazmik's kitchen, kitchen, tasty food">
-	<title>Kazmik's Kitchen - Welcome</title>
+	<title>Kazmik's Kitchen - Book a Table</title>
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
@@ -31,14 +31,9 @@
 
 	<div class="navicon closed"><i class="fa fa-navicon"></i></div>
 	<ul class="navmenu" id="opennav">
-		<li><a href="index.html" class="active">Home</a></li>
-		<li><a href="menu.php">Menu</a></li>
-		<li><a href="#bittoeat">Bite To Eat<span>+</span></a>
-				<ul>
-				<li><a href="#">Book a Table</a></li>
-				<li><a href="homedelivery.php">Home Delivery</a></li>
-				</ul>
-		</li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="ordernow.php">Order Now</a></li>
+		<li><a href="bookatable.php" class="active">Book a Table</a></li>
 		<li><a href="aboutus.html">About US</a></li>
 		<li><a href="contact.php">Contact</a></li>
 	</ul>

@@ -135,6 +135,12 @@ a.bookatable {
 	color: #3084BF;
 }
 
+/* HOME DELIVERY SECTION */
+
+.product-nav{
+	font: 0.75rem Arial, Helvetica, sans-serif;
+}
+
 /* CONTACT US SECTION */
 
 .herounitcontact {
