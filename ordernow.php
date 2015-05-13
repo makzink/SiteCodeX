@@ -68,8 +68,11 @@ include_once("config.php");
 		<div class="product-nav">
 			<h3> Categories </h3><hr/>
 			<a href="ordernow.php?filter=null">Specials of the Week</a><br/><hr/>
-			<a href="ordernow.php?filter=Biriyani">Biriyani</a><br/><hr/>
-			<a href="ordernow.php?filter=Television+DXT">TV</a><br/>
+			<a href="ordernow.php?filter=biriyani">Biriyani</a><br/><hr/>
+			<a href="ordernow.php?filter=tandoor">Tandoor</a><br/><hr/>
+			<a href="ordernow.php?filter=soup">Soup</a><br/><hr/>
+			<a href="ordernow.php?filter=noodle">Noodle</a><br/><hr/>
+			<a href="ordernow.php?filter=rice">Rice</a><br/>
 
 		</div>
 
@@ -87,11 +90,11 @@ include_once("config.php");
 				$current_url = base64_encode($url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 			    if(!isset($_GET['filter'])|!strcmp($filter,"null"))
 			    {
-					$results = $mysqli->query("SELECT * FROM products ORDER BY id ASC");
+					$results = $mysqli->query("SELECT * FROM products where specials = 'yes' ORDER BY id ASC");
 				}
 				else 
 				{
-					$results = $mysqli->query("SELECT * FROM products where product_name = '$filter' ORDER BY id ASC");
+					$results = $mysqli->query("SELECT * FROM products where product_cat = '".$filter."' ORDER BY id ASC");
 				}
 
 			    if ($results) { 
@@ -101,12 +104,12 @@ include_once("config.php");
 				        {
 				        	echo '<div class="product">'; 
 				        	echo '<form method="post" action="cart_update.php">';
-				        	echo '<div class="product-thumb"><img src="img/'.$obj->product_img_name.'"></div>';
+				        	echo '<div class="product-thumb"><img src="img/commingsoon.jpg"></div>';
 				        	echo '<div class="product-content"><h3>'.$obj->product_name.'</h3>';
 				        	echo '<div class="product-info">';
 							echo 'Price '.$currency.$obj->price.' | ';
-				            echo 'Qty <input type="text" name="product_qty" value="1" size="3" /><br/>';
-							echo '<button class="add_to_cart">Add To Cart</button>';
+				            echo 'Qty <input name="product_qty" value="1" type="text" size="3" /><br/>';
+							echo '<button class="add_to_cart"><i class="fa fa-cart-plus" ></i>  Add To Cart</button>';
 							echo '</div></div>';
 							echo '<input type="hidden" name="product_code" value="'.$obj->product_code.'" />';
 				            echo '<input type="hidden" name="type" value="add" />';

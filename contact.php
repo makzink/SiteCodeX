@@ -122,9 +122,9 @@ else
             	<div class="field"><label for="formemail">Email</label><input type="email" id="formemail" name="formemail" required></div>
             	<div class="field"><label for="Message">Message</label><textarea id="Message" name="Message" wrap="hard" required></textarea></div>
             	<div class="field"><input type="submit" id="Submit" name="Submit"><p id="form_p"><?php echo $res; ?></p></div>
-        </div>
-    </div>
-</form>
+        		</div>
+    		</div>
+		</form>
 	</div>
 
 	</div>

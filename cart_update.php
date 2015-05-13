@@ -36,7 +36,7 @@ if(isset($_POST["type"]) && $_POST["type"]=='add')
 			{
 				if($cart_itm["code"] == $product_code){ //the item exist in array
 
-					$product[] = array('name'=>$cart_itm["name"], 'code'=>$cart_itm["code"], 'qty'=>$product_qty, 'price'=>$cart_itm["price"]);
+					$product[] = array('name'=>$cart_itm["name"], 'code'=>$cart_itm["code"], 'qty'=>$cart_itm["qty"]+$product_qty, 'price'=>$cart_itm["price"]);
 					$found = true;
 				}else{
 					//item doesn't exist in the list, just retrive old info and prepare array for session var
