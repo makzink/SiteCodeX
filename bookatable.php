@@ -43,17 +43,88 @@
 
 </header>
 
-<main role="main" class="clearfix">
+<section class="welcome">
 
-	<section class="herounit">
-		<div class="wrap">
-			<h2>Under Construction!!!</h2>
-			<p>Sorry for the inconvinience :( </p>
+<main role="main" class="clearfix wrap">
+
+		
+	<?PHP
+		$name='';
+		$email='';
+		$mob='';
+		$msg='';
+		$res='';
+
+
+		if(isset($_POST['book'])) {
+
+			$title = $_REQUEST['CustomerTitle'];
+			$name = $_REQUEST['name'];
+    		$email = $_REQUEST['foremail'];
+    		$mob = $_REQUEST['MobileNumber'];
+    		$date = $_REQUEST['BookingDate'];
+    		$time = $_REQUEST['BookingTime'];
+    		$nop = $_REQUEST['nop'];
+
+    		$from = "Kazmik's Kitchen"; 
+    		$to = $email; 
+    		$subject = 'Booking Status';
+    		$msg="Greetings $title $name, \n\n \t Your booking has been successfully done for ".$date." at ".$time." for ".$nop." people. We hope to serve u soon.
+    		\n Kazmik's Kitchen";
+
+    		$body = $msg;
+
+    		if (mail ($to, $subject, $body, $from)) 
+ 		    { 
+        		$res = '&nbsp&nbsp&nbspYour booking has been done!';
+    		} 
+			else 
+    		{ 
+        		$res = '&nbsp&nbsp&nbspSomething went wrong,please go back and try again!'; 
+    		}
 			
-		</div>
-	</section>
+			echo "<div class='orderplaced' >". $res;
+			echo "<br/><br/>Redirecting... Please Wait <i class='fa fa-refresh'></i></div>";
+
+			header( "refresh:4;url='bookatable.php'" ); 
+		}
+		else
+		{
+
+	?>
+
+	<div class="booktable-wrap">
+		
+		
+			<form id="form" class="formbooktable" name="form" method="post" accept-charset="UTF-8" action="" autocomplete>
+			   <div class="headtable"> <h1>Book A Table</h1> </div>
+			    <div class="content">
+			        <div class="introbooktable"></div>
+			        <div id="section0" class="sortable">
+			            <div class="fieldbooktable"><label for="CustomerTitle" id="CustomerTitleid">Customer Title</label><select id="CustomerTitle" name="CustomerTitle" required><option value="Mr">Mr</option><option value="Mrs">Mrs</option></select></div>
+			            <div class="fieldbooktable"><label for="name" id="nameid">Customer Name</label><input type="text" id="name" name="name" required></div>
+			            <div class="fieldbooktable"><label for="foremail">Email</label><input type="email" id="foremail" name="foremail" required></div>
+			            <div class="fieldbooktable"><label for="MobileNumber">Mobile Number</label><input type="tel" id="MobileNumber" name="MobileNumber" required></div>
+			            <div class="fieldbooktable"><label for="BookingDate">Booking Date</label><input type="date" id="BookingDate" name="BookingDate" required></div>
+			            <div class="fieldbooktable"><label for="BookingTime">Booking Time</label><input type="time" id="BookingTime" name="BookingTime" required></div>
+			            <div class="fieldbooktable"><label for="nop">No. of People</label><input type="number" id="nop" name="nop" required></div>
+			            <div class="fieldbooktable"><label for="spl">Special Requirements</label><textarea id="spl" name="spl" wrap="hard"></textarea></div>
+			            <div class="fieldbooktablebtn"><input type="submit" id="book" name="book" value="Book Table"></div>
+			        </div>
+			    </div>
+			</form>
+		
+
+	</div>
+
+	<?php
+	 }
+
+	 ?>
 
 </main>
+
+</section>
 
 <div class="footer">
 	<footer role="complementary" class="clearfix wrap" itemscope itemtype="https://schema.org/WPFooter">

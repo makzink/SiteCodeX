@@ -8,7 +8,7 @@
 
 /* Optional min width */
 html {
-  min-width: 31.25rem;
+  min-width: 31rem;
 }
 
 body {
@@ -691,6 +691,49 @@ ul.navmenu li ul {
     margin-bottom: 2rem;
   }
 }
+
+/* BOOK A TABLE SECTION */
+
+.formbooktable{ 
+    max-width: 100%; 
+    min-width: 20%;  
+    padding: 2.125rem; 
+} 
+.formbooktable input[type=radio], input[type=checkbox]{ 
+    margin: 0.625rem; 
+    width: 0.8125rem; 
+} 
+.formbooktable div{ 
+    display: block; 
+} 
+
+.formbooktable .headtable
+{
+  text-align: center;
+}
+
+
+.introbooktable{ 
+    margin-bottom: 1rem; 
+} 
+.clearbooktable{ 
+    clear: both; 
+} 
+.formbooktable textarea{ 
+    height: 5.125rem; 
+    width: 100%; 
+} 
+.formbooktable input[type=submit]{ 
+    width: 30%; 
+} 
+.fieldbooktablebtn
+{
+  text-align: center;
+}
+
+.fieldbooktable , .fieldbooktablebtn{ 
+    margin-bottom: 1.1875rem; 
+} 
 
 
 /* CONTACT US SECTION */
